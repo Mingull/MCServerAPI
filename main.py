@@ -1,5 +1,5 @@
-from flask import Flask, request, redirect, url_for, render_template
-from serverstatus import ServerStatus
+from flask import Flask, request, render_template
+from MCServerAPI.serverstatus import ServerStatus
 
 app = Flask(__name__)
 
@@ -7,11 +7,6 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template("index.html")
-
-
-@app.route('/servers')
-def server():
-    return f'this is the Minecraft server status API made by <span style="font-weight: bold;">Mingull</span>'
 
 
 @app.route('/server', methods=["GET", "POST"])
