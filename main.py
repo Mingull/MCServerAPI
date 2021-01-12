@@ -1,13 +1,12 @@
-from flask import Flask, request, redirect, url_for
+from flask import Flask, request, redirect, url_for, render_template
 from serverstatus import ServerStatus
 
 app = Flask(__name__)
-# app.config["DEBUG"] = True
 
 
 @app.route('/')
 def home():
-    return 'Hello, World!'
+    return render_template("index.html")
 
 
 @app.route('/servers')

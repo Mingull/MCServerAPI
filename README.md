@@ -3,7 +3,7 @@
 ![Website](https://img.shields.io/website?down_color=red&down_message=offline&label=API&style=for-the-badge&up_color=succes&up_message=up&url=https%3A%2F%2Fapi.mingull.tk)
 
 # MCServerAPI
-By Mignull
+By Mingull
 
 
 ### Description
