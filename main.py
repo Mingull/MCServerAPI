@@ -19,6 +19,20 @@ def show_server():
         return "Error: No IP field provided. Please specify an IP."
 
 
+@app.route('/auth', methods=["GET", "POST"])
+def auth():
+    if "username" and "password" in request.args:
+        username = request.args.get("username")
+        pwd = request.args.get("passname")
+        return 'auth'
+    elif "username" and "password" not in request.args:
+        return "no username and password provided"
+    elif "username" not in request.args:
+        return "no username provided"
+    elif "password" not in request.args:
+        return "no password provided"
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return "<h1>404</h1><p>The resource could not be found.</p>", 404
